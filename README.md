@@ -167,6 +167,30 @@ python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
 ```
 
+## Curated YouTube upload queue
+
+Reviewed Shorts live in `data/youtube_upload_queue.json`. The scheduled uploader
+only uploads items where both `enabled` and `approved_for_upload` are true, and
+it records the resulting YouTube URL back into that queue.
+
+Dry-run the next scheduled upload:
+
+```bash
+.venv/bin/python scripts/youtube_upload_queue.py upload-next --limit 1 --dry-run
+```
+
+Upload one approved item:
+
+```bash
+.venv/bin/python scripts/youtube_upload_queue.py upload-next --limit 1 --approved --allow-public
+```
+
+List queue state:
+
+```bash
+.venv/bin/python scripts/youtube_upload_queue.py list
+```
+
 ## Render
 
 ```bash

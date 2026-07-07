@@ -1,6 +1,9 @@
 .venv/
 artifacts/
 secrets/
+logs/
+*.lock
+*.tmp
 __pycache__/
 .DS_Store
 references/stockfish/

@@ -2,3 +2,5 @@ Pillow==11.3.0
 numpy==2.5.1
 torch==2.12.1
 transformers==5.13.0
+google-api-python-client==2.182.0
+google-auth-oauthlib==1.2.2

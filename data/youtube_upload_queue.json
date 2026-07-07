@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "defaults": {
+    "privacy_status": "public",
+    "category_id": "27",
+    "made_for_kids": false,
+    "tags": [
+      "algorithms",
+      "computer science",
+      "programming",
+      "coding",
+      "visualization",
+      "shorts"
+    ],
+    "description_suffix": "\n\n#Shorts #Algorithms #ComputerScience #Programming #Coding"
+  },
+  "items": [
+    {
+      "id": "a_star_math_walkthrough",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/a_star_math_walkthrough.mp4",
+      "thumbnail_path": "artifacts/shorts/a_star_math_walkthrough_thumbnail.png",
+      "title": "A* Pathfinding: The Math Behind Each Step",
+      "description": "A slow walkthrough of A* pathfinding: each neighbor gets scored with f = g + h, then the lowest-cost frontier cell is expanded next.",
+      "tags": [
+        "a star",
+        "astar",
+        "pathfinding",
+        "graph search",
+        "heuristics"
+      ]
+    },
+    {
+      "id": "breadth_first_search",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/breadth_first_search.mp4",
+      "thumbnail_path": "artifacts/shorts/breadth_first_search_thumbnail.png",
+      "title": "Breadth-First Search Explores the Grid",
+      "description": "Breadth-first search expands outward layer by layer, guaranteeing the shortest path on an unweighted grid.",
+      "tags": [
+        "breadth first search",
+        "bfs",
+        "pathfinding",
+        "graph search",
+        "algorithms"
+      ]
+    },
+    {
+      "id": "pathfinding_algorithm_comparison_distribution",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/pathfinding_algorithm_comparison_distribution.mp4",
+      "thumbnail_path": "artifacts/shorts/pathfinding_algorithm_comparison_distribution_thumbnail.png",
+      "title": "Pathfinding Algorithms Compared",
+      "description": "A* search, BFS, DFS, Dijkstra, and Greedy Best-First Search are tested across random grid worlds to compare their search costs.",
+      "tags": [
+        "pathfinding",
+        "a star",
+        "dijkstra",
+        "bfs",
+        "dfs",
+        "greedy best first"
+      ]
+    },
+    {
+      "id": "bitboard_pawn_shift",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/bitboard_pawn_shift.mp4",
+      "thumbnail_path": "artifacts/shorts/bitboard_pawn_shift_thumbnail.png",
+      "title": "Chess Bitboards: The 64-Bit Board Trick",
+      "description": "A chess engine can store an entire board pattern inside one 64-bit integer, then generate pawn moves with fast bit operations.",
+      "tags": [
+        "chess engine",
+        "stockfish",
+        "bitboards",
+        "bit manipulation",
+        "move generation"
+      ]
+    },
+    {
+      "id": "q_learning_gridworld",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/q_learning_gridworld.mp4",
+      "thumbnail_path": "artifacts/shorts/q_learning_gridworld_thumbnail.png",
+      "title": "Q-Learning Learns a Gridworld",
+      "description": "A tabular reinforcement-learning agent starts with a weak policy, trains across episodes, and gradually learns better values for the grid.",
+      "tags": [
+        "reinforcement learning",
+        "q learning",
+        "gridworld",
+        "machine learning",
+        "ai"
+      ]
+    },
+    {
+      "id": "llm_next_token_probabilities",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/llm_next_token_probabilities.mp4",
+      "thumbnail_path": "artifacts/shorts/llm_next_token_probabilities_thumbnail.png",
+      "title": "How an LLM Chooses the Next Token",
+      "description": "At each step, the model scores possible next tokens, turns those scores into probabilities, and samples one continuation.",
+      "tags": [
+        "llm",
+        "language model",
+        "next token prediction",
+        "ai",
+        "machine learning"
+      ]
+    },
+    {
+      "id": "llm_next_token_logit_attribution",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/llm_next_token_logit_attribution.mp4",
+      "thumbnail_path": "artifacts/shorts/llm_next_token_logit_attribution_thumbnail.png",
+      "title": "Which Words Shape an LLM's Next Token?",
+      "description": "Logit attribution highlights which previous tokens push the selected next token upward in the model's final score.",
+      "tags": [
+        "llm",
+        "logit attribution",
+        "interpretability",
+        "ai",
+        "language model"
+      ]
+    },
+    {
+      "id": "llm_logit_attribution_explained",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/llm_logit_attribution_explained.mp4",
+      "thumbnail_path": "artifacts/shorts/llm_logit_attribution_explained_thumbnail.png",
+      "title": "How Logit Attribution Measures Token Influence",
+      "description": "A compact visual explanation of how logit attribution estimates which earlier tokens helped produce a model's next-token choice.",
+      "tags": [
+        "llm",
+        "interpretability",
+        "logit attribution",
+        "machine learning",
+        "ai"
+      ]
+    },
+    {
+      "id": "sorting_algorithm_comparison_cloud",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/sorting_algorithm_comparison_cloud.mp4",
+      "thumbnail_path": "artifacts/shorts/sorting_algorithm_comparison_cloud_thumbnail.png",
+      "title": "Sorting Algorithms Compared by Operation Count",
+      "description": "Sorting algorithms are tested on random lists so their best-case, worst-case, and ordinary shuffled-list costs can be compared on one graph.",
+      "tags": [
+        "sorting algorithms",
+        "bubble sort",
+        "merge sort",
+        "algorithm analysis",
+        "big o"
+      ]
+    },
+    {
+      "id": "a_star_distribution_expanded",
+      "approved_for_upload": false,
+      "enabled": true,
+      "video_path": "artifacts/shorts/a_star_distribution_expanded.mp4",
+      "thumbnail_path": "artifacts/shorts/a_star_distribution_expanded_thumbnail.png",
+      "title": "A* Pathfinding Cost Distribution",
+      "description": "A* search runs across random grid worlds, plotting how many cells it expands as grid size and wall layout vary.",
+      "tags": [
+        "a star",
+        "pathfinding",
+        "cost distribution",
+        "graph search",
+        "algorithms"
+      ],
+      "notes": "Pending review because the combined comparison may be the stronger upload."
+    },
+    {
+      "id": "llm_next_token_attention",
+      "approved_for_upload": false,
+      "enabled": true,
+      "video_path": "artifacts/shorts/llm_next_token_attention.mp4",
+      "thumbnail_path": "artifacts/shorts/llm_next_token_attention_thumbnail.png",
+      "title": "What Attention Reads During Token Generation",
+      "description": "Attention weights show which earlier token representations a model routes information from during next-token generation.",
+      "tags": [
+        "llm",
+        "attention",
+        "transformers",
+        "machine learning",
+        "ai"
+      ],
+      "notes": "Pending review; ablation/logit-attribution versions were more intuitive."
+    }
+  ]
+}
