@@ -1,0 +1,6 @@
+.venv/
+artifacts/
+secrets/
+__pycache__/
+.DS_Store
+references/stockfish/
