@@ -171,7 +171,9 @@ python3 -m venv .venv
 
 Reviewed Shorts live in `data/youtube_upload_queue.json`. The scheduled uploader
 only uploads items where both `enabled` and `approved_for_upload` are true, and
-it records the resulting YouTube URL back into that queue.
+it records the resulting YouTube URL back into that queue. Title and description
+hashtags are also maintained in the queue and appended automatically at upload
+time.
 
 Dry-run the next scheduled upload:
 

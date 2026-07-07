@@ -12,7 +12,16 @@
       "visualization",
       "shorts"
     ],
-    "description_suffix": "\n\n#Shorts #Algorithms #ComputerScience #Programming #Coding"
+    "title_hashtags": [
+      "#Shorts"
+    ],
+    "description_hashtags": [
+      "#Shorts",
+      "#Algorithms",
+      "#ComputerScience",
+      "#Programming",
+      "#Coding"
+    ]
   },
   "items": [
     {
@@ -29,6 +38,15 @@
         "pathfinding",
         "graph search",
         "heuristics"
+      ],
+      "title_hashtags": [
+        "#AStar",
+        "#Pathfinding"
+      ],
+      "description_hashtags": [
+        "#AStar",
+        "#Pathfinding",
+        "#GraphSearch"
       ]
     },
     {
@@ -45,6 +63,15 @@
         "pathfinding",
         "graph search",
         "algorithms"
+      ],
+      "title_hashtags": [
+        "#BFS",
+        "#Pathfinding"
+      ],
+      "description_hashtags": [
+        "#BFS",
+        "#Pathfinding",
+        "#GraphSearch"
       ]
     },
     {
@@ -62,6 +89,17 @@
         "bfs",
         "dfs",
         "greedy best first"
+      ],
+      "title_hashtags": [
+        "#Pathfinding",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#Pathfinding",
+        "#AStar",
+        "#Dijkstra",
+        "#BFS",
+        "#DFS"
       ]
     },
     {
@@ -78,6 +116,16 @@
         "bitboards",
         "bit manipulation",
         "move generation"
+      ],
+      "title_hashtags": [
+        "#Chess",
+        "#Bitboards"
+      ],
+      "description_hashtags": [
+        "#ChessEngine",
+        "#Bitboards",
+        "#Stockfish",
+        "#BitManipulation"
       ]
     },
     {
@@ -94,6 +142,16 @@
         "gridworld",
         "machine learning",
         "ai"
+      ],
+      "title_hashtags": [
+        "#QLearning",
+        "#AI"
+      ],
+      "description_hashtags": [
+        "#QLearning",
+        "#ReinforcementLearning",
+        "#MachineLearning",
+        "#AI"
       ]
     },
     {
@@ -110,6 +168,16 @@
         "next token prediction",
         "ai",
         "machine learning"
+      ],
+      "title_hashtags": [
+        "#LLM",
+        "#AI"
+      ],
+      "description_hashtags": [
+        "#LLM",
+        "#AI",
+        "#MachineLearning",
+        "#NextTokenPrediction"
       ]
     },
     {
@@ -126,6 +194,16 @@
         "interpretability",
         "ai",
         "language model"
+      ],
+      "title_hashtags": [
+        "#LLM",
+        "#AI"
+      ],
+      "description_hashtags": [
+        "#LLM",
+        "#AI",
+        "#Interpretability",
+        "#LogitAttribution"
       ]
     },
     {
@@ -142,6 +220,16 @@
         "logit attribution",
         "machine learning",
         "ai"
+      ],
+      "title_hashtags": [
+        "#LLM",
+        "#AI"
+      ],
+      "description_hashtags": [
+        "#LLM",
+        "#AI",
+        "#Interpretability",
+        "#LogitAttribution"
       ]
     },
     {
@@ -158,6 +246,17 @@
         "merge sort",
         "algorithm analysis",
         "big o"
+      ],
+      "title_hashtags": [
+        "#Sorting",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#SortingAlgorithms",
+        "#BigO",
+        "#AlgorithmAnalysis",
+        "#MergeSort",
+        "#BubbleSort"
       ]
     },
     {
@@ -175,6 +274,16 @@
         "graph search",
         "algorithms"
       ],
+      "title_hashtags": [
+        "#AStar",
+        "#Pathfinding"
+      ],
+      "description_hashtags": [
+        "#AStar",
+        "#Pathfinding",
+        "#GraphSearch",
+        "#AlgorithmAnalysis"
+      ],
       "notes": "Pending review because the combined comparison may be the stronger upload."
     },
     {
@@ -191,6 +300,16 @@
         "transformers",
         "machine learning",
         "ai"
+      ],
+      "title_hashtags": [
+        "#LLM",
+        "#Attention"
+      ],
+      "description_hashtags": [
+        "#LLM",
+        "#Attention",
+        "#Transformers",
+        "#MachineLearning"
       ],
       "notes": "Pending review; ablation/logit-attribution versions were more intuitive."
     }

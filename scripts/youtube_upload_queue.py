@@ -181,13 +181,20 @@ def build_manifest(defaults: dict[str, Any], item: dict[str, Any]) -> UploadMani
     tags = [str(tag) for tag in defaults.get("tags", [])]
     tags.extend(str(tag) for tag in item.get("tags", []))
     tags = dedupe_preserving_order(tags)
+
+    title_hashtags = collect_hashtags(defaults, item, "title_hashtags")
+    title = append_hashtags(str(item["title"]), title_hashtags)
+
     description = str(item.get("description", ""))
     suffix = str(defaults.get("description_suffix", ""))
     if suffix and suffix.strip() not in description:
         description = description.rstrip() + suffix
+    description_hashtags = collect_hashtags(defaults, item, "description_hashtags")
+    description = append_hashtags(description, description_hashtags, separator="\n\n")
+
     return UploadManifest(
         video_path=video_path,
-        title=str(item["title"]),
+        title=title,
         description=description,
         tags=tags,
         privacy_status=str(item.get("privacy_status") or defaults.get("privacy_status", "private")),
@@ -195,6 +202,24 @@ def build_manifest(defaults: dict[str, Any], item: dict[str, Any]) -> UploadMani
         made_for_kids=bool(item.get("made_for_kids", defaults.get("made_for_kids", False))),
         thumbnail_path=Path(str(thumbnail_raw)) if thumbnail_raw else None,
     )
+
+
+def collect_hashtags(defaults: dict[str, Any], item: dict[str, Any], key: str) -> list[str]:
+    values = [str(value) for value in defaults.get(key, [])]
+    values.extend(str(value) for value in item.get(key, []))
+    return dedupe_preserving_order(normalize_hashtag(value) for value in values)
+
+
+def normalize_hashtag(value: str) -> str:
+    cleaned = "".join(character for character in value.strip() if character.isalnum() or character == "_")
+    return f"#{cleaned}" if cleaned else ""
+
+
+def append_hashtags(text: str, hashtags: list[str], separator: str = " ") -> str:
+    missing = [hashtag for hashtag in hashtags if hashtag and hashtag.casefold() not in text.casefold()]
+    if not missing:
+        return text
+    return text.rstrip() + separator + " ".join(missing)
 
 
 def dedupe_preserving_order(values: Iterable[str]) -> list[str]:
