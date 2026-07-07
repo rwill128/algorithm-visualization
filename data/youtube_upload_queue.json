@@ -89,7 +89,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/pathfinding_algorithm_comparison_distribution.mp4",
       "thumbnail_path": "artifacts/shorts/pathfinding_algorithm_comparison_distribution_thumbnail.png",
-      "title": "Pathfinding Algorithms Compared",
+      "title": "Pathfinding Cost Distribution Comparison",
       "description": "A* search, BFS, DFS, Dijkstra, and Greedy Best-First Search are tested across random grid worlds to compare their search costs.",
       "tags": [
         "pathfinding",
@@ -147,7 +147,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/q_learning_gridworld.mp4",
       "thumbnail_path": "artifacts/shorts/q_learning_gridworld_thumbnail.png",
-      "title": "Q-Learning Learns a Gridworld",
+      "title": "Q-Learning: Before and After Training",
       "description": "A tabular reinforcement-learning agent starts with a weak policy, trains across episodes, and gradually learns better values for the grid.",
       "tags": [
         "reinforcement learning",
@@ -173,7 +173,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/llm_next_token_probabilities.mp4",
       "thumbnail_path": "artifacts/shorts/llm_next_token_probabilities_thumbnail.png",
-      "title": "How an LLM Chooses the Next Token",
+      "title": "Inside an LLM's Next-Token Choice",
       "description": "At each step, the model scores possible next tokens, turns those scores into probabilities, and samples one continuation.",
       "tags": [
         "llm",
@@ -199,7 +199,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/llm_next_token_logit_attribution.mp4",
       "thumbnail_path": "artifacts/shorts/llm_next_token_logit_attribution_thumbnail.png",
-      "title": "Which Words Shape an LLM's Next Token?",
+      "title": "Which Tokens Influence an LLM the Most?",
       "description": "Logit attribution highlights which previous tokens push the selected next token upward in the model's final score.",
       "tags": [
         "llm",
@@ -225,7 +225,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/llm_logit_attribution_explained.mp4",
       "thumbnail_path": "artifacts/shorts/llm_logit_attribution_explained_thumbnail.png",
-      "title": "How Logit Attribution Measures Token Influence",
+      "title": "How Logit Attribution Tracks Token Influence",
       "description": "A compact visual explanation of how logit attribution estimates which earlier tokens helped produce a model's next-token choice.",
       "tags": [
         "llm",
@@ -251,7 +251,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/sorting_algorithm_comparison_cloud.mp4",
       "thumbnail_path": "artifacts/shorts/sorting_algorithm_comparison_cloud_thumbnail.png",
-      "title": "Sorting Algorithms Compared by Operation Count",
+      "title": "Sorting Cost Distribution Comparison",
       "description": "Sorting algorithms are tested on random lists so their best-case, worst-case, and ordinary shuffled-list costs can be compared on one graph.",
       "tags": [
         "sorting algorithms",
@@ -278,7 +278,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/a_star_distribution_expanded.mp4",
       "thumbnail_path": "artifacts/shorts/a_star_distribution_expanded_thumbnail.png",
-      "title": "A* Pathfinding Cost Distribution",
+      "title": "A* Cost Distribution Comparison",
       "description": "A* search runs across random grid worlds, plotting how many cells it expands as grid size and wall layout vary.",
       "tags": [
         "a star",
@@ -304,7 +304,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/llm_next_token_attention.mp4",
       "thumbnail_path": "artifacts/shorts/llm_next_token_attention_thumbnail.png",
-      "title": "What Attention Reads During Token Generation",
+      "title": "What Transformer Attention Actually Reads",
       "description": "Attention weights show which earlier token representations a model routes information from during next-token generation.",
       "tags": [
         "llm",
@@ -330,7 +330,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/breadth_first_distribution_expanded.mp4",
       "thumbnail_path": "artifacts/shorts/breadth_first_distribution_expanded_thumbnail.png",
-      "title": "Breadth-First Search Cost Distribution",
+      "title": "BFS Cost Distribution Comparison",
       "description": "Breadth-first search runs across random wall grids, plotting how many cells it expands as the grid area changes.",
       "tags": [
         "breadth first search",
@@ -356,7 +356,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/depth_first_distribution_expanded.mp4",
       "thumbnail_path": "artifacts/shorts/depth_first_distribution_expanded_thumbnail.png",
-      "title": "Depth-First Search Cost Distribution",
+      "title": "DFS Cost Distribution Comparison",
       "description": "Depth-first search is tested on random grid worlds, showing how its explored-cell count varies across wall layouts.",
       "tags": [
         "depth first search",
@@ -382,7 +382,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/dijkstra_distribution_expanded.mp4",
       "thumbnail_path": "artifacts/shorts/dijkstra_distribution_expanded_thumbnail.png",
-      "title": "Dijkstra Pathfinding Cost Distribution",
+      "title": "Dijkstra Cost Distribution Comparison",
       "description": "Dijkstra search runs across random grid worlds, plotting the explored cells needed to guarantee shortest paths.",
       "tags": [
         "dijkstra",
@@ -408,7 +408,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/greedy_best_first_distribution_expanded.mp4",
       "thumbnail_path": "artifacts/shorts/greedy_best_first_distribution_expanded_thumbnail.png",
-      "title": "Greedy Best-First Search Cost Distribution",
+      "title": "Greedy Search Cost Distribution Comparison",
       "description": "Greedy Best-First Search runs across random grid worlds, showing when chasing the goal heuristic is cheap or expensive.",
       "tags": [
         "greedy best first",
@@ -434,7 +434,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/bubble_sort_operation_cloud_log.mp4",
       "thumbnail_path": "artifacts/shorts/bubble_sort_operation_cloud_log_thumbnail.png",
-      "title": "Bubble Sort on a Log Scale",
+      "title": "Bubble Sort Cost Distribution on a Log Scale",
       "description": "Bubble sort samples are plotted on a logarithmic cost scale so the gap between linear and quadratic behavior is easier to see.",
       "tags": [
         "bubble sort",
@@ -460,7 +460,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/bubble_sort_operation_cloud_n100.mp4",
       "thumbnail_path": "artifacts/shorts/bubble_sort_operation_cloud_n100_thumbnail.png",
-      "title": "Bubble Sort Cost Distribution up to 100 Items",
+      "title": "Bubble Sort Cost Distribution: N <= 100",
       "description": "Bubble sort is tested on shuffled lists up to 100 elements, showing the cloud of real operation counts between best and worst cases.",
       "tags": [
         "bubble sort",
@@ -486,7 +486,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/bubble_sort_operation_meters.mp4",
       "thumbnail_path": "artifacts/shorts/bubble_sort_operation_meters_thumbnail.png",
-      "title": "Bubble Sort Operation Meters",
+      "title": "Bubble Sort Operation Cost Breakdown",
       "description": "Bubble sort runs with live meters for comparisons, reads, writes, swaps, and memory so the algorithm cost is visible as it sorts.",
       "tags": [
         "bubble sort",
@@ -512,7 +512,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/cocktail_sort.mp4",
       "thumbnail_path": "artifacts/shorts/cocktail_sort_thumbnail.png",
-      "title": "Cocktail Shaker Sort Visualized",
+      "title": "Cocktail Sort: Bidirectional Bubble Sort",
       "description": "Cocktail shaker sort moves in both directions through the list, bubbling small and large values toward their final positions.",
       "tags": [
         "cocktail sort",
@@ -538,7 +538,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/cocktail_sort_operation_meters.mp4",
       "thumbnail_path": "artifacts/shorts/cocktail_sort_operation_meters_thumbnail.png",
-      "title": "Cocktail Sort Operation Meters",
+      "title": "Cocktail Sort Operation Cost Breakdown",
       "description": "Cocktail shaker sort is shown with live counters for comparisons, reads, writes, swaps, and memory usage.",
       "tags": [
         "cocktail sort",
@@ -564,7 +564,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/gnome_sort_operation_meters.mp4",
       "thumbnail_path": "artifacts/shorts/gnome_sort_operation_meters_thumbnail.png",
-      "title": "Gnome Sort Operation Meters",
+      "title": "Gnome Sort Operation Cost Breakdown",
       "description": "Gnome sort walks backward through local inversions, with operation meters showing the cost of each comparison and swap.",
       "tags": [
         "gnome sort",
@@ -590,7 +590,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/insertion_sort_operation_meters.mp4",
       "thumbnail_path": "artifacts/shorts/insertion_sort_operation_meters_thumbnail.png",
-      "title": "Insertion Sort Operation Meters",
+      "title": "Insertion Sort Operation Cost Breakdown",
       "description": "Insertion sort builds a sorted prefix while live meters track comparisons, reads, writes, swaps, and memory use.",
       "tags": [
         "insertion sort",
@@ -616,7 +616,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/merge_sort_operation_meters.mp4",
       "thumbnail_path": "artifacts/shorts/merge_sort_operation_meters_thumbnail.png",
-      "title": "Merge Sort Operation Meters",
+      "title": "Merge Sort Operation Cost Breakdown",
       "description": "Merge sort recursively splits and merges while live meters show comparisons, reads, writes, swaps, and peak auxiliary memory.",
       "tags": [
         "merge sort",
@@ -642,7 +642,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/odd-even_sort_operation_meters.mp4",
       "thumbnail_path": "artifacts/shorts/odd-even_sort_operation_meters_thumbnail.png",
-      "title": "Odd-Even Sort Operation Meters",
+      "title": "Odd-Even Sort Operation Cost Breakdown",
       "description": "Odd-even sort alternates even and odd comparison passes, with live operation meters tracking the cost as the list sorts.",
       "tags": [
         "odd even sort",
@@ -668,7 +668,7 @@
       "enabled": true,
       "video_path": "artifacts/shorts/selection_sort_operation_meters.mp4",
       "thumbnail_path": "artifacts/shorts/selection_sort_operation_meters_thumbnail.png",
-      "title": "Selection Sort Operation Meters",
+      "title": "Selection Sort Operation Cost Breakdown",
       "description": "Selection sort repeatedly scans for the next minimum while live meters show comparisons, reads, writes, swaps, and memory use.",
       "tags": [
         "selection sort",
