@@ -43,7 +43,7 @@ ENEMY = (37, 42, 52)
 
 COMPARISON_ROWS: tuple[tuple[str, int, str, str, str, tuple[int, int, int]], ...] = (
     ("Try every square", 64, "64 tests + path checks", "branch-heavy", "~70+ ns", RED),
-    ("Scan rays now", 14, "up to 14 square probes", "loop stops at blockers", "~2-10 ns", YELLOW),
+    ("Step outward from rook", 14, "up to 14 square probes", "stop at first blocker", "~2-10 ns", YELLOW),
     ("Bitboard lookup", 3, "mask + index + table load", "fixed-shape work", "~1-3 ns cached", GREEN),
 )
 
