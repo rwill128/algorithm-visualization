@@ -13,4 +13,10 @@ mkdir -p logs
     args+=(--approved --allow-public)
   fi
   .venv/bin/python "${args[@]}"
+
+  if [[ "${DRY_RUN:-0}" != "1" ]] && ! git diff --quiet -- data/youtube_upload_queue.json; then
+    git add data/youtube_upload_queue.json
+    git commit -m "Record YouTube upload queue state"
+    git push origin main
+  fi
 } >> logs/youtube-upload-queue.log 2>&1
