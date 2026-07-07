@@ -47,7 +47,12 @@
         "#AStar",
         "#Pathfinding",
         "#GraphSearch"
-      ]
+      ],
+      "uploaded_at": "2026-07-06T17:59:19Z",
+      "youtube_video_id": "kpwp0HloVLA",
+      "youtube_url": "https://youtu.be/kpwp0HloVLA",
+      "uploaded_privacy_status": "public",
+      "notes": "Matched to live upload titled A* Search Guide by duration and topic."
     },
     {
       "id": "breadth_first_search",
@@ -72,7 +77,11 @@
         "#BFS",
         "#Pathfinding",
         "#GraphSearch"
-      ]
+      ],
+      "uploaded_at": "2026-07-07T00:03:08Z",
+      "youtube_video_id": "nQzQqy91kAM",
+      "youtube_url": "https://youtu.be/nQzQqy91kAM",
+      "uploaded_privacy_status": "public"
     },
     {
       "id": "pathfinding_algorithm_comparison_distribution",
@@ -126,7 +135,11 @@
         "#Bitboards",
         "#Stockfish",
         "#BitManipulation"
-      ]
+      ],
+      "uploaded_at": "2026-07-07T00:01:29Z",
+      "youtube_video_id": "l_uOke7Inl4",
+      "youtube_url": "https://youtu.be/l_uOke7Inl4",
+      "uploaded_privacy_status": "public"
     },
     {
       "id": "q_learning_gridworld",
@@ -234,7 +247,7 @@
     },
     {
       "id": "sorting_algorithm_comparison_cloud",
-      "approved_for_upload": true,
+      "approved_for_upload": false,
       "enabled": true,
       "video_path": "artifacts/shorts/sorting_algorithm_comparison_cloud.mp4",
       "thumbnail_path": "artifacts/shorts/sorting_algorithm_comparison_cloud_thumbnail.png",
@@ -257,7 +270,8 @@
         "#AlgorithmAnalysis",
         "#MergeSort",
         "#BubbleSort"
-      ]
+      ],
+      "notes": "Paused for review because a related Sorting Algorithm Cost Comparison video is already live at https://youtu.be/kR7szGqyB_I."
     },
     {
       "id": "a_star_distribution_expanded",
