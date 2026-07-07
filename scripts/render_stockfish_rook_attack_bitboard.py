@@ -305,7 +305,7 @@ def draw_equation(draw: ImageDraw.ImageDraw, width: int, y: int, state: FrameSta
         color = GREEN
     else:
         title = "This is the movegen hot path."
-        lines = ["Stockfish loops over rooks, gets an attack bitboard,", "ANDs it with the target mask, then splats moves."]
+        lines = ["Stockfish loops over rooks, gets an attack bitboard,", "ANDs it with the target mask, then writes those moves."]
         code = "attacks_bb<ROOK>(from, pos.pieces()) & target"
         color = TEAL
 
