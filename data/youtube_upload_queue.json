@@ -142,6 +142,34 @@
       "uploaded_privacy_status": "public"
     },
     {
+      "id": "stockfish_rook_attack_bitboard",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/stockfish_rook_attack_bitboard.mp4",
+      "thumbnail_path": "artifacts/shorts/stockfish_rook_attack_bitboard_thumbnail.png",
+      "title": "How Stockfish Finds Rook Moves So Fast",
+      "description": "Stockfish-style bitboards turn rook move generation into fast mask operations, table lookups, and fixed-shape CPU work instead of repeated board scanning.",
+      "tags": [
+        "stockfish",
+        "chess engine",
+        "bitboards",
+        "move generation",
+        "bit manipulation",
+        "performance"
+      ],
+      "title_hashtags": [
+        "#Stockfish",
+        "#Chess"
+      ],
+      "description_hashtags": [
+        "#Stockfish",
+        "#ChessEngine",
+        "#Bitboards",
+        "#Algorithms",
+        "#Programming"
+      ]
+    },
+    {
       "id": "q_learning_gridworld",
       "approved_for_upload": true,
       "enabled": true,
