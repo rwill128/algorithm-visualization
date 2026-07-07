@@ -132,6 +132,14 @@ surprisal, token-level perplexity, entropy, and effective choices:
 - LLM Next-Token Logit Attribution: `artifacts/shorts/llm_next_token_logit_attribution.mp4`
 - Logit Attribution Explained: `artifacts/shorts/llm_logit_attribution_explained.mp4`
 
+## Coding interview videos
+
+The LeetCode-pattern renderer walks through the shape of a common coding
+interview solution: a naive baseline, the core insight, readable pseudocode, and
+an animated trace of the optimized algorithm.
+
+- Two Sum Hash Map Pattern: `artifacts/shorts/two_sum_hash_map_pattern.mp4`
+
 ## Operation-cloud videos
 
 The operation-cloud renderer creates vertical sorting-cost charts:
@@ -210,6 +218,7 @@ List queue state:
 .venv/bin/python scripts/render_bitboard_pawn_shift.py
 .venv/bin/python scripts/render_gridworld_rl_short.py
 .venv/bin/python scripts/render_llm_next_token_short.py
+.venv/bin/python scripts/render_leetcode_pattern_short.py
 .venv/bin/python scripts/render_pathfinding_distribution.py
 .venv/bin/python scripts/render_bubble_sort_operation_cloud.py
 .venv/bin/python scripts/render_bubble_sort_operation_cloud.py --all
