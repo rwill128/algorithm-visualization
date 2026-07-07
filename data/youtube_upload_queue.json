@@ -247,7 +247,7 @@
     },
     {
       "id": "sorting_algorithm_comparison_cloud",
-      "approved_for_upload": false,
+      "approved_for_upload": true,
       "enabled": true,
       "video_path": "artifacts/shorts/sorting_algorithm_comparison_cloud.mp4",
       "thumbnail_path": "artifacts/shorts/sorting_algorithm_comparison_cloud_thumbnail.png",
@@ -270,12 +270,11 @@
         "#AlgorithmAnalysis",
         "#MergeSort",
         "#BubbleSort"
-      ],
-      "notes": "Paused for review because a related Sorting Algorithm Cost Comparison video is already live at https://youtu.be/kR7szGqyB_I."
+      ]
     },
     {
       "id": "a_star_distribution_expanded",
-      "approved_for_upload": false,
+      "approved_for_upload": true,
       "enabled": true,
       "video_path": "artifacts/shorts/a_star_distribution_expanded.mp4",
       "thumbnail_path": "artifacts/shorts/a_star_distribution_expanded_thumbnail.png",
@@ -297,12 +296,11 @@
         "#Pathfinding",
         "#GraphSearch",
         "#AlgorithmAnalysis"
-      ],
-      "notes": "Pending review because the combined comparison may be the stronger upload."
+      ]
     },
     {
       "id": "llm_next_token_attention",
-      "approved_for_upload": false,
+      "approved_for_upload": true,
       "enabled": true,
       "video_path": "artifacts/shorts/llm_next_token_attention.mp4",
       "thumbnail_path": "artifacts/shorts/llm_next_token_attention_thumbnail.png",
@@ -324,8 +322,397 @@
         "#Attention",
         "#Transformers",
         "#MachineLearning"
+      ]
+    },
+    {
+      "id": "breadth_first_distribution_expanded",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/breadth_first_distribution_expanded.mp4",
+      "thumbnail_path": "artifacts/shorts/breadth_first_distribution_expanded_thumbnail.png",
+      "title": "Breadth-First Search Cost Distribution",
+      "description": "Breadth-first search runs across random wall grids, plotting how many cells it expands as the grid area changes.",
+      "tags": [
+        "breadth first search",
+        "bfs",
+        "pathfinding",
+        "cost distribution",
+        "graph search"
       ],
-      "notes": "Pending review; ablation/logit-attribution versions were more intuitive."
+      "title_hashtags": [
+        "#BFS",
+        "#Pathfinding"
+      ],
+      "description_hashtags": [
+        "#BFS",
+        "#Pathfinding",
+        "#GraphSearch",
+        "#AlgorithmAnalysis"
+      ]
+    },
+    {
+      "id": "depth_first_distribution_expanded",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/depth_first_distribution_expanded.mp4",
+      "thumbnail_path": "artifacts/shorts/depth_first_distribution_expanded_thumbnail.png",
+      "title": "Depth-First Search Cost Distribution",
+      "description": "Depth-first search is tested on random grid worlds, showing how its explored-cell count varies across wall layouts.",
+      "tags": [
+        "depth first search",
+        "dfs",
+        "pathfinding",
+        "cost distribution",
+        "graph search"
+      ],
+      "title_hashtags": [
+        "#DFS",
+        "#Pathfinding"
+      ],
+      "description_hashtags": [
+        "#DFS",
+        "#Pathfinding",
+        "#GraphSearch",
+        "#AlgorithmAnalysis"
+      ]
+    },
+    {
+      "id": "dijkstra_distribution_expanded",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/dijkstra_distribution_expanded.mp4",
+      "thumbnail_path": "artifacts/shorts/dijkstra_distribution_expanded_thumbnail.png",
+      "title": "Dijkstra Pathfinding Cost Distribution",
+      "description": "Dijkstra search runs across random grid worlds, plotting the explored cells needed to guarantee shortest paths.",
+      "tags": [
+        "dijkstra",
+        "pathfinding",
+        "cost distribution",
+        "graph search",
+        "shortest path"
+      ],
+      "title_hashtags": [
+        "#Dijkstra",
+        "#Pathfinding"
+      ],
+      "description_hashtags": [
+        "#Dijkstra",
+        "#Pathfinding",
+        "#GraphSearch",
+        "#ShortestPath"
+      ]
+    },
+    {
+      "id": "greedy_best_first_distribution_expanded",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/greedy_best_first_distribution_expanded.mp4",
+      "thumbnail_path": "artifacts/shorts/greedy_best_first_distribution_expanded_thumbnail.png",
+      "title": "Greedy Best-First Search Cost Distribution",
+      "description": "Greedy Best-First Search runs across random grid worlds, showing when chasing the goal heuristic is cheap or expensive.",
+      "tags": [
+        "greedy best first",
+        "pathfinding",
+        "heuristics",
+        "cost distribution",
+        "graph search"
+      ],
+      "title_hashtags": [
+        "#GreedySearch",
+        "#Pathfinding"
+      ],
+      "description_hashtags": [
+        "#GreedyBestFirst",
+        "#Pathfinding",
+        "#Heuristics",
+        "#GraphSearch"
+      ]
+    },
+    {
+      "id": "bubble_sort_operation_cloud_log",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/bubble_sort_operation_cloud_log.mp4",
+      "thumbnail_path": "artifacts/shorts/bubble_sort_operation_cloud_log_thumbnail.png",
+      "title": "Bubble Sort on a Log Scale",
+      "description": "Bubble sort samples are plotted on a logarithmic cost scale so the gap between linear and quadratic behavior is easier to see.",
+      "tags": [
+        "bubble sort",
+        "sorting algorithms",
+        "log scale",
+        "algorithm analysis",
+        "big o"
+      ],
+      "title_hashtags": [
+        "#BubbleSort",
+        "#BigO"
+      ],
+      "description_hashtags": [
+        "#BubbleSort",
+        "#SortingAlgorithms",
+        "#BigO",
+        "#AlgorithmAnalysis"
+      ]
+    },
+    {
+      "id": "bubble_sort_operation_cloud_n100",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/bubble_sort_operation_cloud_n100.mp4",
+      "thumbnail_path": "artifacts/shorts/bubble_sort_operation_cloud_n100_thumbnail.png",
+      "title": "Bubble Sort Cost Distribution up to 100 Items",
+      "description": "Bubble sort is tested on shuffled lists up to 100 elements, showing the cloud of real operation counts between best and worst cases.",
+      "tags": [
+        "bubble sort",
+        "sorting algorithms",
+        "cost distribution",
+        "algorithm analysis",
+        "big o"
+      ],
+      "title_hashtags": [
+        "#BubbleSort",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#BubbleSort",
+        "#SortingAlgorithms",
+        "#BigO",
+        "#AlgorithmAnalysis"
+      ]
+    },
+    {
+      "id": "bubble_sort_operation_meters",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/bubble_sort_operation_meters.mp4",
+      "thumbnail_path": "artifacts/shorts/bubble_sort_operation_meters_thumbnail.png",
+      "title": "Bubble Sort Operation Meters",
+      "description": "Bubble sort runs with live meters for comparisons, reads, writes, swaps, and memory so the algorithm cost is visible as it sorts.",
+      "tags": [
+        "bubble sort",
+        "sorting algorithms",
+        "operation count",
+        "algorithm visualization",
+        "computer science"
+      ],
+      "title_hashtags": [
+        "#BubbleSort",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#BubbleSort",
+        "#SortingAlgorithms",
+        "#ComputerScience",
+        "#Programming"
+      ]
+    },
+    {
+      "id": "cocktail_sort",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/cocktail_sort.mp4",
+      "thumbnail_path": "artifacts/shorts/cocktail_sort_thumbnail.png",
+      "title": "Cocktail Shaker Sort Visualized",
+      "description": "Cocktail shaker sort moves in both directions through the list, bubbling small and large values toward their final positions.",
+      "tags": [
+        "cocktail sort",
+        "cocktail shaker sort",
+        "sorting algorithms",
+        "algorithm visualization",
+        "computer science"
+      ],
+      "title_hashtags": [
+        "#Sorting",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#CocktailSort",
+        "#SortingAlgorithms",
+        "#ComputerScience",
+        "#Programming"
+      ]
+    },
+    {
+      "id": "cocktail_sort_operation_meters",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/cocktail_sort_operation_meters.mp4",
+      "thumbnail_path": "artifacts/shorts/cocktail_sort_operation_meters_thumbnail.png",
+      "title": "Cocktail Sort Operation Meters",
+      "description": "Cocktail shaker sort is shown with live counters for comparisons, reads, writes, swaps, and memory usage.",
+      "tags": [
+        "cocktail sort",
+        "cocktail shaker sort",
+        "sorting algorithms",
+        "operation count",
+        "computer science"
+      ],
+      "title_hashtags": [
+        "#Sorting",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#CocktailSort",
+        "#SortingAlgorithms",
+        "#ComputerScience",
+        "#Programming"
+      ]
+    },
+    {
+      "id": "gnome_sort_operation_meters",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/gnome_sort_operation_meters.mp4",
+      "thumbnail_path": "artifacts/shorts/gnome_sort_operation_meters_thumbnail.png",
+      "title": "Gnome Sort Operation Meters",
+      "description": "Gnome sort walks backward through local inversions, with operation meters showing the cost of each comparison and swap.",
+      "tags": [
+        "gnome sort",
+        "sorting algorithms",
+        "operation count",
+        "algorithm visualization",
+        "computer science"
+      ],
+      "title_hashtags": [
+        "#Sorting",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#GnomeSort",
+        "#SortingAlgorithms",
+        "#ComputerScience",
+        "#Programming"
+      ]
+    },
+    {
+      "id": "insertion_sort_operation_meters",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/insertion_sort_operation_meters.mp4",
+      "thumbnail_path": "artifacts/shorts/insertion_sort_operation_meters_thumbnail.png",
+      "title": "Insertion Sort Operation Meters",
+      "description": "Insertion sort builds a sorted prefix while live meters track comparisons, reads, writes, swaps, and memory use.",
+      "tags": [
+        "insertion sort",
+        "sorting algorithms",
+        "operation count",
+        "algorithm visualization",
+        "computer science"
+      ],
+      "title_hashtags": [
+        "#InsertionSort",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#InsertionSort",
+        "#SortingAlgorithms",
+        "#ComputerScience",
+        "#Programming"
+      ]
+    },
+    {
+      "id": "merge_sort_operation_meters",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/merge_sort_operation_meters.mp4",
+      "thumbnail_path": "artifacts/shorts/merge_sort_operation_meters_thumbnail.png",
+      "title": "Merge Sort Operation Meters",
+      "description": "Merge sort recursively splits and merges while live meters show comparisons, reads, writes, swaps, and peak auxiliary memory.",
+      "tags": [
+        "merge sort",
+        "sorting algorithms",
+        "operation count",
+        "algorithm visualization",
+        "computer science"
+      ],
+      "title_hashtags": [
+        "#MergeSort",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#MergeSort",
+        "#SortingAlgorithms",
+        "#ComputerScience",
+        "#Programming"
+      ]
+    },
+    {
+      "id": "odd-even_sort_operation_meters",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/odd-even_sort_operation_meters.mp4",
+      "thumbnail_path": "artifacts/shorts/odd-even_sort_operation_meters_thumbnail.png",
+      "title": "Odd-Even Sort Operation Meters",
+      "description": "Odd-even sort alternates even and odd comparison passes, with live operation meters tracking the cost as the list sorts.",
+      "tags": [
+        "odd even sort",
+        "sorting algorithms",
+        "operation count",
+        "algorithm visualization",
+        "computer science"
+      ],
+      "title_hashtags": [
+        "#Sorting",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#OddEvenSort",
+        "#SortingAlgorithms",
+        "#ComputerScience",
+        "#Programming"
+      ]
+    },
+    {
+      "id": "selection_sort_operation_meters",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/selection_sort_operation_meters.mp4",
+      "thumbnail_path": "artifacts/shorts/selection_sort_operation_meters_thumbnail.png",
+      "title": "Selection Sort Operation Meters",
+      "description": "Selection sort repeatedly scans for the next minimum while live meters show comparisons, reads, writes, swaps, and memory use.",
+      "tags": [
+        "selection sort",
+        "sorting algorithms",
+        "operation count",
+        "algorithm visualization",
+        "computer science"
+      ],
+      "title_hashtags": [
+        "#SelectionSort",
+        "#Algorithms"
+      ],
+      "description_hashtags": [
+        "#SelectionSort",
+        "#SortingAlgorithms",
+        "#ComputerScience",
+        "#Programming"
+      ]
+    },
+    {
+      "id": "two_sum_hash_map_pattern",
+      "approved_for_upload": true,
+      "enabled": true,
+      "video_path": "artifacts/shorts/two_sum_hash_map_pattern.mp4",
+      "thumbnail_path": "artifacts/shorts/two_sum_hash_map_pattern_thumbnail.png",
+      "title": "Two Sum: The Hash Map Trick",
+      "description": "The Two Sum pattern is visualized from the naive pair scan to the optimized one-pass complement lookup using a hash map.",
+      "tags": [
+        "leetcode",
+        "two sum",
+        "hash map",
+        "coding interview",
+        "algorithms"
+      ],
+      "title_hashtags": [
+        "#LeetCode",
+        "#CodingInterview"
+      ],
+      "description_hashtags": [
+        "#LeetCode",
+        "#CodingInterview",
+        "#HashMap",
+        "#Algorithms"
+      ]
     }
   ]
 }
