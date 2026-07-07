@@ -42,9 +42,9 @@ FRIENDLY = (245, 242, 232)
 ENEMY = (37, 42, 52)
 
 COMPARISON_ROWS: tuple[tuple[str, int, str, str, str, tuple[int, int, int]], ...] = (
-    ("Try every square", 64, "64 tests + path checks", "branch-heavy", "slowest", RED),
-    ("Scan rays now", 14, "up to 14 square probes", "loop stops at blockers", "medium", YELLOW),
-    ("Bitboard lookup", 3, "mask + index + table load", "fixed-shape work", "fastest", GREEN),
+    ("Try every square", 64, "64 tests + path checks", "branch-heavy", "~70+ ns", RED),
+    ("Scan rays now", 14, "up to 14 square probes", "loop stops at blockers", "~2-10 ns", YELLOW),
+    ("Bitboard lookup", 3, "mask + index + table load", "fixed-shape work", "~1-3 ns cached", GREEN),
 )
 
 
@@ -377,16 +377,17 @@ def draw_comparison(draw: ImageDraw.ImageDraw, width: int, height: int, state: F
     value_font = bubble.font(25, bold=True)
     draw.text((x, y), title, font=title_font, fill=TEAL)
     draw.text((x, y + 62), "Where can this rook move, given the occupied squares?", font=body_font, fill=bubble.TEXT)
-    draw.text((x, y + 104), "Relative CPU work per query. Shorter bars should usually execute faster.", font=small_font, fill=bubble.MUTED)
+    draw.text((x, y + 104), "Likely native C++ time per query. Exact ns vary by CPU and cache.", font=small_font, fill=bubble.MUTED)
 
     cpu_x = x
     graph_y = y + 170
     row_h = 148
-    cpu_bar_w = 560
+    cpu_bar_w = 490
     max_cpu = max(row[1] for row in COMPARISON_ROWS)
 
-    draw.text((cpu_x, graph_y - 46), "Likely per-query time", font=label_font, fill=bubble.TEXT)
-    draw.text((cpu_x + 690, graph_y - 46), "CPU shape", font=label_font, fill=bubble.TEXT)
+    draw.text((cpu_x, graph_y - 46), "Relative work", font=label_font, fill=bubble.TEXT)
+    draw.text((cpu_x + 510, graph_y - 46), "Likely time", font=label_font, fill=bubble.TEXT)
+    draw.text((cpu_x + 710, graph_y - 46), "CPU shape", font=label_font, fill=bubble.TEXT)
     for index, (name, cpu_units, cpu_label, cpu_shape, likely_time, color) in enumerate(COMPARISON_ROWS):
         row_y = graph_y + index * row_h
         visible = state.progress >= 0.18 + index * 0.18
@@ -401,8 +402,8 @@ def draw_comparison(draw: ImageDraw.ImageDraw, width: int, height: int, state: F
         cpu_fill = int(cpu_bar_w * (cpu_units / max_cpu) * bar_scale)
         if cpu_fill > 0:
             bubble.rounded_rect(draw, (cpu_x, cpu_y, cpu_x + cpu_fill, cpu_y + 32), 12, color, color, 1)
-        draw.text((cpu_x + cpu_bar_w + 18, cpu_y + 1), likely_time, font=value_font, fill=bubble.TEXT if visible else bubble.MUTED)
-        draw.text((cpu_x + 690, cpu_y + 1), cpu_shape, font=small_font, fill=bubble.TEXT if visible else bubble.MUTED)
+        draw.text((cpu_x + 510, cpu_y + 1), likely_time, font=value_font, fill=bubble.TEXT if visible else bubble.MUTED)
+        draw.text((cpu_x + 710, cpu_y + 1), cpu_shape, font=small_font, fill=bubble.TEXT if visible else bubble.MUTED)
 
     callout_y = graph_y + len(COMPARISON_ROWS) * row_h + 22
     bubble.rounded_rect(draw, (x, callout_y, width - margin - 34, callout_y + 178), 18, (23, 28, 39), TEAL, 2)
