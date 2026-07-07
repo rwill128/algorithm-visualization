@@ -41,10 +41,10 @@ LINE = (45, 55, 74)
 FRIENDLY = (245, 242, 232)
 ENEMY = (37, 42, 52)
 
-COMPARISON_ROWS: tuple[tuple[str, int, str, int, str, tuple[int, int, int]], ...] = (
-    ("Try every square", 64, "64 tests", 1, "64 destination tests, plus path checks", RED),
-    ("Scan rays now", 14, "14 probes", 1, "walk north/south/east/west until blocked", YELLOW),
-    ("Bitboard lookup", 3, "3 steps", 800, "mask + index + table load", GREEN),
+COMPARISON_ROWS: tuple[tuple[str, int, str, str, str, tuple[int, int, int]], ...] = (
+    ("Try every square", 64, "64 tests + path checks", "branch-heavy", "slowest", RED),
+    ("Scan rays now", 14, "up to 14 square probes", "loop stops at blockers", "medium", YELLOW),
+    ("Bitboard lookup", 3, "mask + index + table load", "fixed-shape work", "fastest", GREEN),
 )
 
 
@@ -261,7 +261,7 @@ def draw_title(draw: ImageDraw.ImageDraw, width: int, state: FrameState) -> None
         "attacks": "The result is one attack bitboard for this rook.",
         "legal": "Then friendly pieces are removed from the target mask.",
         "stockfish": "Move generation becomes bit masks plus table lookups.",
-        "comparison": "The speed comes from trading memory for less repeated work.",
+        "comparison": "The speed comes from fixed-shape CPU work.",
     }
     subtitle = subtitles[state.phase]
     subtitle_font = bubble.fit_font(draw, subtitle, 31, int(width * 0.9), min_size=24)
@@ -377,48 +377,38 @@ def draw_comparison(draw: ImageDraw.ImageDraw, width: int, height: int, state: F
     value_font = bubble.font(25, bold=True)
     draw.text((x, y), title, font=title_font, fill=TEAL)
     draw.text((x, y + 62), "Where can this rook move, given the occupied squares?", font=body_font, fill=bubble.TEXT)
-    draw.text((x, y + 104), "Relative work per rook attack query. Lower CPU bars are better.", font=small_font, fill=bubble.MUTED)
+    draw.text((x, y + 104), "Relative CPU work per query. Shorter bars should usually execute faster.", font=small_font, fill=bubble.MUTED)
 
     cpu_x = x
-    mem_x = x + 520
     graph_y = y + 170
     row_h = 148
-    cpu_bar_w = 350
-    mem_bar_w = 250
+    cpu_bar_w = 560
     max_cpu = max(row[1] for row in COMPARISON_ROWS)
-    max_mem = max(row[3] for row in COMPARISON_ROWS)
 
-    draw.text((cpu_x, graph_y - 46), "CPU work", font=label_font, fill=bubble.TEXT)
-    draw.text((mem_x, graph_y - 46), "Memory", font=label_font, fill=bubble.TEXT)
-    for index, (name, cpu_units, cpu_label, memory_kb, note, color) in enumerate(COMPARISON_ROWS):
+    draw.text((cpu_x, graph_y - 46), "Likely per-query time", font=label_font, fill=bubble.TEXT)
+    draw.text((cpu_x + 690, graph_y - 46), "CPU shape", font=label_font, fill=bubble.TEXT)
+    for index, (name, cpu_units, cpu_label, cpu_shape, likely_time, color) in enumerate(COMPARISON_ROWS):
         row_y = graph_y + index * row_h
         visible = state.progress >= 0.18 + index * 0.18
         alpha = min(1.0, max(0.0, (state.progress - (0.18 + index * 0.18)) / 0.18))
         bar_scale = alpha if visible else 0.0
 
         draw.text((cpu_x, row_y), name, font=label_font, fill=color if visible else bubble.MUTED)
-        draw.text((cpu_x, row_y + 34), note, font=small_font, fill=bubble.MUTED)
+        draw.text((cpu_x, row_y + 34), cpu_label, font=small_font, fill=bubble.MUTED)
 
         cpu_y = row_y + 74
         bubble.rounded_rect(draw, (cpu_x, cpu_y, cpu_x + cpu_bar_w, cpu_y + 32), 12, (23, 28, 39), LINE, 1)
         cpu_fill = int(cpu_bar_w * (cpu_units / max_cpu) * bar_scale)
         if cpu_fill > 0:
             bubble.rounded_rect(draw, (cpu_x, cpu_y, cpu_x + cpu_fill, cpu_y + 32), 12, color, color, 1)
-        draw.text((cpu_x + cpu_bar_w + 14, cpu_y + 1), cpu_label, font=value_font, fill=bubble.TEXT if visible else bubble.MUTED)
-
-        mem_y = row_y + 74
-        bubble.rounded_rect(draw, (mem_x, mem_y, mem_x + mem_bar_w, mem_y + 32), 12, (23, 28, 39), LINE, 1)
-        mem_fill = int(mem_bar_w * (memory_kb / max_mem) * bar_scale)
-        if mem_fill > 0:
-            bubble.rounded_rect(draw, (mem_x, mem_y, mem_x + mem_fill, mem_y + 32), 12, color, color, 1)
-        mem_label = "~800 KB" if memory_kb >= 800 else "tiny"
-        draw.text((mem_x + mem_bar_w + 14, mem_y + 1), mem_label, font=value_font, fill=bubble.TEXT if visible else bubble.MUTED)
+        draw.text((cpu_x + cpu_bar_w + 18, cpu_y + 1), likely_time, font=value_font, fill=bubble.TEXT if visible else bubble.MUTED)
+        draw.text((cpu_x + 690, cpu_y + 1), cpu_shape, font=small_font, fill=bubble.TEXT if visible else bubble.MUTED)
 
     callout_y = graph_y + len(COMPARISON_ROWS) * row_h + 22
     bubble.rounded_rect(draw, (x, callout_y, width - margin - 34, callout_y + 178), 18, (23, 28, 39), TEAL, 2)
-    draw.text((x + 22, callout_y + 22), "The engine pays for a table once.", font=bubble.font(34, bold=True), fill=TEAL)
-    draw.text((x + 22, callout_y + 74), "Then each sliding-piece query becomes a few bit operations", font=body_font, fill=bubble.TEXT)
-    draw.text((x + 22, callout_y + 112), "plus one attack-mask lookup instead of repeated board walking.", font=body_font, fill=bubble.MUTED)
+    draw.text((x + 22, callout_y + 22), "The win is fewer branches and less repeated board walking.", font=bubble.fit_font(draw, "The win is fewer branches and less repeated board walking.", 34, width - 2 * margin - 90, bold=True, min_size=25), fill=TEAL)
+    draw.text((x + 22, callout_y + 74), "Bitboard lookup turns a variable scan into fixed-shape CPU work:", font=body_font, fill=bubble.TEXT)
+    draw.text((x + 22, callout_y + 112), "mask the blockers, compute an index, load the attack mask.", font=body_font, fill=bubble.MUTED)
 
 
 def draw_frame(width: int, height: int, state: FrameState, frame_number: int, total_frames: int) -> Image.Image:
