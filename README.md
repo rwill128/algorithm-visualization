@@ -105,11 +105,13 @@ distributions remain greyed out.
 
 ## Chess engine videos
 
-The bitboard renderer introduces Stockfish-style board representation with a
-64-bit pawn mask, then shows pawn pushes as a north shift filtered by empty
-squares:
+The bitboard renderers introduce Stockfish-style board representation. One
+shows pawn pushes as a north shift filtered by empty squares; the other shows
+how occupied squares shape sliding rook attack masks in the move-generation
+hot path:
 
 - Bitboard Pawn Shift: `artifacts/shorts/bitboard_pawn_shift.mp4`
+- Stockfish Rook Attack Bitboard: `artifacts/shorts/stockfish_rook_attack_bitboard.mp4`
 
 ## Reinforcement learning videos
 
@@ -216,6 +218,7 @@ List queue state:
 .venv/bin/python scripts/render_greedy_best_first_math_walkthrough.py
 .venv/bin/python scripts/render_dijkstra_math_walkthrough.py
 .venv/bin/python scripts/render_bitboard_pawn_shift.py
+.venv/bin/python scripts/render_stockfish_rook_attack_bitboard.py
 .venv/bin/python scripts/render_gridworld_rl_short.py
 .venv/bin/python scripts/render_llm_next_token_short.py
 .venv/bin/python scripts/render_leetcode_pattern_short.py
