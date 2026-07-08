@@ -241,7 +241,16 @@
         "#AI",
         "#MachineLearning",
         "#NextTokenPrediction"
-      ]
+      ],
+      "uploaded_at": "2026-07-08T20:00:08.258648+00:00",
+      "youtube_video_id": "AOauSU2Rxx0",
+      "youtube_url": "https://youtu.be/AOauSU2Rxx0",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-08T20:00:09.195914+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=AOauSU2Rxx0&alt=json&uploadType=resumable returned \"The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.\". Details: \"[{'message': 'The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]\">"
+      }
     },
     {
       "id": "llm_next_token_logit_attribution",
