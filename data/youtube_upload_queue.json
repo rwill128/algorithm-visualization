@@ -276,7 +276,16 @@
         "#AI",
         "#Interpretability",
         "#LogitAttribution"
-      ]
+      ],
+      "uploaded_at": "2026-07-08T22:00:06.209230+00:00",
+      "youtube_video_id": "EWxo8b7Dnkg",
+      "youtube_url": "https://youtu.be/EWxo8b7Dnkg",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-08T22:00:07.237010+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=EWxo8b7Dnkg&alt=json&uploadType=resumable returned \"The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.\". Details: \"[{'message': 'The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]\">"
+      }
     },
     {
       "id": "llm_logit_attribution_explained",
