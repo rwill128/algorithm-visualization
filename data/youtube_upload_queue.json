@@ -109,7 +109,11 @@
         "#Dijkstra",
         "#BFS",
         "#DFS"
-      ]
+      ],
+      "uploaded_at": "2026-07-08T15:27:51Z",
+      "youtube_video_id": "UHmXghB-BKA",
+      "youtube_url": "https://youtu.be/UHmXghB-BKA",
+      "uploaded_privacy_status": "public"
     },
     {
       "id": "bitboard_pawn_shift",

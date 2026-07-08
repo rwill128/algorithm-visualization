@@ -8,7 +8,7 @@
   <array>
     <string>/bin/zsh</string>
     <string>-lc</string>
-    <string>cd "/Users/richardwilliams/Documents/Algorithm Visualizations" || exit 1; mkdir -p logs; { echo "[$(/bin/date -u '+%Y-%m-%dT%H:%M:%SZ')] youtube upload queue run"; args=(scripts/youtube_upload_queue.py upload-next --limit "${UPLOAD_LIMIT:-1}"); if [[ "${DRY_RUN:-0}" == "1" ]]; then args+=(--dry-run); else args+=(--approved --allow-public); fi; .venv/bin/python "${args[@]}"; if [[ "${DRY_RUN:-0}" != "1" ]] &amp;&amp; ! /usr/bin/git diff --quiet -- data/youtube_upload_queue.json; then /usr/bin/git add data/youtube_upload_queue.json; /usr/bin/git commit -m "Record YouTube upload queue state"; /usr/bin/git push origin main; fi; } &gt;&gt; logs/youtube-upload-queue.log 2&gt;&amp;1</string>
+    <string>cd "/Users/richardwilliams/algorithm-visualization-uploader" || exit 1; mkdir -p logs; { echo "[$(/bin/date -u '+%Y-%m-%dT%H:%M:%SZ')] youtube upload queue run"; args=(scripts/youtube_upload_queue.py upload-next --limit "${UPLOAD_LIMIT:-1}"); if [[ "${DRY_RUN:-0}" == "1" ]]; then args+=(--dry-run); else args+=(--approved --allow-public); fi; .venv/bin/python "${args[@]}"; if [[ "${DRY_RUN:-0}" != "1" ]] &amp;&amp; ! /usr/bin/git diff --quiet -- data/youtube_upload_queue.json; then /usr/bin/git add data/youtube_upload_queue.json; /usr/bin/git commit -m "Record YouTube upload queue state"; /usr/bin/git push origin main; fi; } &gt;&gt; logs/youtube-upload-queue.log 2&gt;&amp;1</string>
   </array>
   <key>StartCalendarInterval</key>
   <array>
@@ -50,10 +50,10 @@
     </dict>
   </array>
   <key>WorkingDirectory</key>
-  <string>/Users/richardwilliams/Documents/Algorithm Visualizations</string>
+  <string>/Users/richardwilliams/algorithm-visualization-uploader</string>
   <key>StandardOutPath</key>
-  <string>/Users/richardwilliams/Documents/Algorithm Visualizations/logs/youtube-upload-launchd.out.log</string>
+  <string>/Users/richardwilliams/algorithm-visualization-uploader/logs/youtube-upload-launchd.out.log</string>
   <key>StandardErrorPath</key>
-  <string>/Users/richardwilliams/Documents/Algorithm Visualizations/logs/youtube-upload-launchd.err.log</string>
+  <string>/Users/richardwilliams/algorithm-visualization-uploader/logs/youtube-upload-launchd.err.log</string>
 </dict>
 </plist>

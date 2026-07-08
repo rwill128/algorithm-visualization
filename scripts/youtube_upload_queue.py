@@ -4,6 +4,7 @@ import argparse
 import contextlib
 import fcntl
 import json
+import mimetypes
 import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -113,14 +114,18 @@ def upload_next(
 
             try:
                 video_id = upload_video(youtube, manifest)
-                if manifest.thumbnail_path:
-                    set_thumbnail(youtube, video_id, manifest.thumbnail_path)
             except Exception as exc:
                 mark_failed(queue, index, exc)
                 print(f"FAILED {item['id']}: {exc}", file=sys.stderr)
                 raise
 
             mark_uploaded(queue, index, video_id, manifest.privacy_status)
+            if manifest.thumbnail_path:
+                try:
+                    set_thumbnail(youtube, video_id, manifest.thumbnail_path)
+                except Exception as exc:
+                    mark_thumbnail_failed(queue, index, exc)
+                    print(f"THUMBNAIL_FAILED {item['id']}: {exc}", file=sys.stderr)
             uploaded += 1
             print(f"Uploaded {item['id']}: https://youtu.be/{video_id}")
 
@@ -135,8 +140,10 @@ def locked_queue(queue_path: Path) -> Any:
     with lock_path.open("w") as lock_file:
         fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX)
         queue = read_queue(queue_path)
-        yield queue
-        write_queue(queue_path, queue)
+        try:
+            yield queue
+        finally:
+            write_queue(queue_path, queue)
 
 
 def read_queue(queue_path: Path) -> dict[str, Any]:
@@ -267,10 +274,19 @@ def mark_uploaded(queue: dict[str, Any], index: int, video_id: str, privacy_stat
     item["youtube_url"] = f"https://youtu.be/{video_id}"
     item["uploaded_privacy_status"] = privacy_status
     item.pop("last_error", None)
+    item.pop("thumbnail_error", None)
 
 
 def mark_failed(queue: dict[str, Any], index: int, exc: Exception) -> None:
     queue["items"][index]["last_error"] = {
+        "failed_at": datetime.now(timezone.utc).isoformat(),
+        "type": type(exc).__name__,
+        "message": str(exc),
+    }
+
+
+def mark_thumbnail_failed(queue: dict[str, Any], index: int, exc: Exception) -> None:
+    queue["items"][index]["thumbnail_error"] = {
         "failed_at": datetime.now(timezone.utc).isoformat(),
         "type": type(exc).__name__,
         "message": str(exc),
@@ -329,7 +345,10 @@ def set_thumbnail(youtube: Any, video_id: str, thumbnail_path: Path) -> None:
     require_youtube_dependencies()
     from googleapiclient.http import MediaFileUpload
 
-    media = MediaFileUpload(str(thumbnail_path), mimetype="image/*", resumable=True)
+    mimetype, _encoding = mimetypes.guess_type(thumbnail_path)
+    if mimetype not in {"image/jpeg", "image/png"}:
+        raise ValueError(f"Unsupported YouTube thumbnail type for {thumbnail_path}: {mimetype}")
+    media = MediaFileUpload(str(thumbnail_path), mimetype=mimetype, resumable=True)
     youtube.thumbnails().set(videoId=video_id, media_body=media).execute()
 
 
