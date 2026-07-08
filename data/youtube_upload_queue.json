@@ -171,7 +171,16 @@
         "#Bitboards",
         "#Algorithms",
         "#Programming"
-      ]
+      ],
+      "uploaded_at": "2026-07-08T16:00:07.928716+00:00",
+      "youtube_video_id": "I2YZFu1gDVk",
+      "youtube_url": "https://youtu.be/I2YZFu1gDVk",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-08T16:00:08.880388+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=I2YZFu1gDVk&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
     },
     {
       "id": "q_learning_gridworld",
