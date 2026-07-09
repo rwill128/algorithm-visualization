@@ -276,7 +276,16 @@
         "#AI",
         "#Interpretability",
         "#LogitAttribution"
-      ]
+      ],
+      "uploaded_at": "2026-07-09T18:00:08.860383+00:00",
+      "youtube_video_id": "iXitQONdUaQ",
+      "youtube_url": "https://youtu.be/iXitQONdUaQ",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-09T18:00:10.016960+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=iXitQONdUaQ&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
     },
     {
       "id": "llm_logit_attribution_explained",
