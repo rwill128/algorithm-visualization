@@ -241,7 +241,16 @@
         "#AI",
         "#MachineLearning",
         "#NextTokenPrediction"
-      ]
+      ],
+      "uploaded_at": "2026-07-09T16:00:08.764186+00:00",
+      "youtube_video_id": "adVihOkoxDg",
+      "youtube_url": "https://youtu.be/adVihOkoxDg",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-09T16:00:10.119004+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=adVihOkoxDg&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
     },
     {
       "id": "llm_next_token_logit_attribution",
