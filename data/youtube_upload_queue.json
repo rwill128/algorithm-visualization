@@ -172,14 +172,14 @@
         "#Algorithms",
         "#Programming"
       ],
-      "uploaded_at": "2026-07-08T16:00:07.928716+00:00",
-      "youtube_video_id": "I2YZFu1gDVk",
-      "youtube_url": "https://youtu.be/I2YZFu1gDVk",
+      "uploaded_at": "2026-07-09T12:00:09.947768+00:00",
+      "youtube_video_id": "auae0I_gjzs",
+      "youtube_url": "https://youtu.be/auae0I_gjzs",
       "uploaded_privacy_status": "public",
       "thumbnail_error": {
-        "failed_at": "2026-07-08T16:00:08.880388+00:00",
+        "failed_at": "2026-07-09T12:00:10.986176+00:00",
         "type": "HttpError",
-        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=I2YZFu1gDVk&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=auae0I_gjzs&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
       }
     },
     {
@@ -206,16 +206,7 @@
         "#ReinforcementLearning",
         "#MachineLearning",
         "#AI"
-      ],
-      "uploaded_at": "2026-07-08T18:00:06.090529+00:00",
-      "youtube_video_id": "KbwFZMkiOSE",
-      "youtube_url": "https://youtu.be/KbwFZMkiOSE",
-      "uploaded_privacy_status": "public",
-      "thumbnail_error": {
-        "failed_at": "2026-07-08T18:00:06.768313+00:00",
-        "type": "HttpError",
-        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=KbwFZMkiOSE&alt=json&uploadType=resumable returned \"The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.\". Details: \"[{'message': 'The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]\">"
-      }
+      ]
     },
     {
       "id": "llm_next_token_probabilities",
@@ -241,16 +232,7 @@
         "#AI",
         "#MachineLearning",
         "#NextTokenPrediction"
-      ],
-      "uploaded_at": "2026-07-08T20:00:08.258648+00:00",
-      "youtube_video_id": "AOauSU2Rxx0",
-      "youtube_url": "https://youtu.be/AOauSU2Rxx0",
-      "uploaded_privacy_status": "public",
-      "thumbnail_error": {
-        "failed_at": "2026-07-08T20:00:09.195914+00:00",
-        "type": "HttpError",
-        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=AOauSU2Rxx0&alt=json&uploadType=resumable returned \"The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.\". Details: \"[{'message': 'The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]\">"
-      }
+      ]
     },
     {
       "id": "llm_next_token_logit_attribution",
@@ -276,16 +258,7 @@
         "#AI",
         "#Interpretability",
         "#LogitAttribution"
-      ],
-      "uploaded_at": "2026-07-08T22:00:06.209230+00:00",
-      "youtube_video_id": "EWxo8b7Dnkg",
-      "youtube_url": "https://youtu.be/EWxo8b7Dnkg",
-      "uploaded_privacy_status": "public",
-      "thumbnail_error": {
-        "failed_at": "2026-07-08T22:00:07.237010+00:00",
-        "type": "HttpError",
-        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=EWxo8b7Dnkg&alt=json&uploadType=resumable returned \"The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.\". Details: \"[{'message': 'The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.', 'domain': 'youtube.quota', 'reason': 'quotaExceeded'}]\">"
-      }
+      ]
     },
     {
       "id": "llm_logit_attribution_explained",
@@ -779,6 +752,93 @@
         "#LeetCode",
         "#CodingInterview",
         "#HashMap",
+        "#Algorithms"
+      ]
+    },
+    {
+      "id": "rl_algorithm_learning_curves",
+      "title": "RL Learning Curves: Which Update Rule Learns Fastest?",
+      "description": "A gridworld reinforcement-learning comparison: Q-learning, SARSA, Expected SARSA, and Monte Carlo control train on the same environment while their rolling episode returns reveal how quickly each method improves.",
+      "video_path": "artifacts/shorts/rl_algorithm_learning_curves.mp4",
+      "thumbnail_path": "artifacts/shorts/rl_algorithm_learning_curves_thumbnail.png",
+      "approved_for_upload": true,
+      "enabled": true,
+      "tags": [
+        "reinforcement learning",
+        "q learning",
+        "sarsa",
+        "monte carlo control",
+        "machine learning",
+        "gridworld",
+        "algorithm visualization"
+      ],
+      "title_hashtags": [
+        "#ReinforcementLearning",
+        "#MachineLearning"
+      ],
+      "description_hashtags": [
+        "#ReinforcementLearning",
+        "#MachineLearning",
+        "#QLearning",
+        "#Gridworld",
+        "#Algorithms"
+      ]
+    },
+    {
+      "id": "rl_feature_toggles",
+      "title": "RL Feature Toggles: Which Training Trick Learns Fastest?",
+      "description": "A reinforcement-learning gridworld test that starts with basic Q-learning, then toggles exploration decay, eligibility traces, and optimistic values while the greedy policy evaluation curve shows what each trick changes.",
+      "video_path": "artifacts/shorts/rl_feature_toggles.mp4",
+      "thumbnail_path": "artifacts/shorts/rl_feature_toggles_thumbnail.png",
+      "approved_for_upload": true,
+      "enabled": true,
+      "tags": [
+        "reinforcement learning",
+        "q learning",
+        "eligibility traces",
+        "exploration decay",
+        "machine learning",
+        "gridworld",
+        "algorithm visualization"
+      ],
+      "title_hashtags": [
+        "#ReinforcementLearning",
+        "#MachineLearning"
+      ],
+      "description_hashtags": [
+        "#ReinforcementLearning",
+        "#MachineLearning",
+        "#QLearning",
+        "#Gridworld",
+        "#Algorithms"
+      ]
+    },
+    {
+      "id": "rl_feature_toggles_large_grid",
+      "title": "RL Feature Toggles in a Harder Gridworld",
+      "description": "A larger reinforcement-learning gridworld test: basic Q-learning is compared against exploration decay, eligibility traces, and optimistic values while the learned greedy routes appear on the map.",
+      "video_path": "artifacts/shorts/rl_feature_toggles_large_grid.mp4",
+      "thumbnail_path": "artifacts/shorts/rl_feature_toggles_large_grid_thumbnail.png",
+      "approved_for_upload": true,
+      "enabled": true,
+      "tags": [
+        "reinforcement learning",
+        "q learning",
+        "eligibility traces",
+        "exploration decay",
+        "machine learning",
+        "gridworld",
+        "algorithm visualization"
+      ],
+      "title_hashtags": [
+        "#ReinforcementLearning",
+        "#MachineLearning"
+      ],
+      "description_hashtags": [
+        "#ReinforcementLearning",
+        "#MachineLearning",
+        "#QLearning",
+        "#Gridworld",
         "#Algorithms"
       ]
     }
