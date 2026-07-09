@@ -347,7 +347,16 @@
         "#AlgorithmAnalysis",
         "#MergeSort",
         "#BubbleSort"
-      ]
+      ],
+      "uploaded_at": "2026-07-09T22:00:05.937895+00:00",
+      "youtube_video_id": "YDFjjxShyLc",
+      "youtube_url": "https://youtu.be/YDFjjxShyLc",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-09T22:00:06.977751+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=YDFjjxShyLc&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
     },
     {
       "id": "a_star_distribution_expanded",
