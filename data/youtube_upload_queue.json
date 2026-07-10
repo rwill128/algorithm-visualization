@@ -452,7 +452,16 @@
         "#Pathfinding",
         "#GraphSearch",
         "#AlgorithmAnalysis"
-      ]
+      ],
+      "uploaded_at": "2026-07-10T16:00:05.762494+00:00",
+      "youtube_video_id": "Cg3-pKCOE6c",
+      "youtube_url": "https://youtu.be/Cg3-pKCOE6c",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-10T16:00:06.766999+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=Cg3-pKCOE6c&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
     },
     {
       "id": "depth_first_distribution_expanded",
