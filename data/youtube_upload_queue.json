@@ -382,7 +382,16 @@
         "#Pathfinding",
         "#GraphSearch",
         "#AlgorithmAnalysis"
-      ]
+      ],
+      "uploaded_at": "2026-07-10T12:00:10.336390+00:00",
+      "youtube_video_id": "D3guXhqBMB4",
+      "youtube_url": "https://youtu.be/D3guXhqBMB4",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-10T12:00:11.218367+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=D3guXhqBMB4&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
     },
     {
       "id": "llm_next_token_attention",
