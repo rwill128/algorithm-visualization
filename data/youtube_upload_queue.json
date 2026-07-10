@@ -522,7 +522,16 @@
         "#Pathfinding",
         "#GraphSearch",
         "#ShortestPath"
-      ]
+      ],
+      "uploaded_at": "2026-07-10T20:00:06.780395+00:00",
+      "youtube_video_id": "vwl9XiHlnpA",
+      "youtube_url": "https://youtu.be/vwl9XiHlnpA",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-10T20:00:07.787588+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=vwl9XiHlnpA&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
     },
     {
       "id": "greedy_best_first_distribution_expanded",
