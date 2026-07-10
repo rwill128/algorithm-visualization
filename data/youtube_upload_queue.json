@@ -487,7 +487,16 @@
         "#Pathfinding",
         "#GraphSearch",
         "#AlgorithmAnalysis"
-      ]
+      ],
+      "uploaded_at": "2026-07-10T18:00:05.333587+00:00",
+      "youtube_video_id": "an3gRy9GUto",
+      "youtube_url": "https://youtu.be/an3gRy9GUto",
+      "uploaded_privacy_status": "public",
+      "thumbnail_error": {
+        "failed_at": "2026-07-10T18:00:06.461720+00:00",
+        "type": "HttpError",
+        "message": "<HttpError 403 when requesting https://youtube.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=an3gRy9GUto&alt=json&uploadType=resumable returned \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\". Details: \"[{'message': \"The authenticated user doesn't have permissions to upload and set custom video thumbnails.\", 'domain': 'youtube.thumbnail', 'reason': 'forbidden', 'location': 'Authorization', 'locationType': 'header'}]\">"
+      }
     },
     {
       "id": "dijkstra_distribution_expanded",
