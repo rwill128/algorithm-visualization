@@ -622,7 +622,12 @@
         "#SortingAlgorithms",
         "#BigO",
         "#AlgorithmAnalysis"
-      ]
+      ],
+      "last_error": {
+        "failed_at": "2026-07-11T14:00:03.813466+00:00",
+        "type": "ResumableUploadError",
+        "message": "<HttpError 400 when requesting None returned \"The request metadata specifies an invalid or empty video title.\". Details: \"[{'message': 'The request metadata specifies an invalid or empty video title.', 'domain': 'youtube.video', 'reason': 'invalidTitle', 'location': 'body.snippet.title', 'locationType': 'other'}]\">"
+      }
     },
     {
       "id": "bubble_sort_operation_meters",
