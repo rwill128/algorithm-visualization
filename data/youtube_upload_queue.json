@@ -863,7 +863,11 @@
         "#SortingAlgorithms",
         "#ComputerScience",
         "#Programming"
-      ]
+      ],
+      "uploaded_at": "2026-07-12T18:00:06.078460+00:00",
+      "youtube_video_id": "yuY9hi5Hu3k",
+      "youtube_url": "https://youtu.be/yuY9hi5Hu3k",
+      "uploaded_privacy_status": "public"
     },
     {
       "id": "two_sum_hash_map_pattern",
